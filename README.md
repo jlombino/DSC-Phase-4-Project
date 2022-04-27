@@ -93,13 +93,13 @@ This table shows the performance of each of the models listed above on the train
 
 <h2>Model Results</h2>
 
-The model achieves <b>90.4% Accuracy</b> on the test dataset. The model appears to be better at classifying positive cases than negative cases, but this makes sense because the training data had an abundance of positive cases. Despite this, the model achieves a 86% precision and 97% recall on the test set.
+The model achieves <b>90.7% Accuracy</b> on the test dataset. The model appears to be better at classifying positive cases than negative cases, but this makes sense because the training data had an abundance of positive cases. Despite this, the model achieves a 88% precision and 99% recall on the test set.
 
 <img src=images/tx_confusion.png>
 
 <h1><a href=https://github.com/marcotcr/lime>Lime</a> Explanation of Results</h1>
 
-I used Lime to explain what the model is "seeing" when it makes a classification. I looked at explanations for images the model classified correctly and incorrectly. In both cases, the model does seem to focus near the lungs, exactly where the x-ray images would show signs of pneumonia. There is some interesting behavior in some of the predictions though where the model appears to be focusing outside the body. This is unexpected and concerning, but one possible explanation is that one's body weight has some impact on susceptibility to pneumonia.
+I used Lime to explain what the model is "seeing" when it makes a classification. The green shaded areas show evidence that pneumonia is present while the red shaded areas show evidence that the x-ray is normal. I looked at explanations for images the model classified correctly and incorrectly. In both cases, the model does seem to focus near the lungs, exactly where the x-ray images would show signs of pneumonia. There is some interesting behavior in some of the predictions though where the model appears to be focusing outside the body. This is unexpected and concerning, but one possible explanation is that one's body weight has some impact on susceptibility to pneumonia.
 
 <img src=images/tx_tp.png>
 
